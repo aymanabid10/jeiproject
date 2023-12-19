@@ -12,14 +12,35 @@ class _HomeBottomNavigationBarState extends State<HomeBottomNavigationBar> {
   Widget build(BuildContext context) {
     return  BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
+      selectedFontSize: 0,
       elevation: 0,
       backgroundColor: const Color.fromRGBO(238, 238, 238, 1),
       items: [
         BottomNavigationBarItem(
-          icon: Image.asset(
-            "lib/images/01 align center.png",
-            height:40,
-            width: 40,
+          icon: Container(
+            child: Column(
+              children: [
+                  Image.asset(
+                    "lib/images/01 align center.png",
+                    height:40,
+                    width: 40,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Visibility(
+                    visible: true,
+                    child:Container(
+                          width: 8,
+                          height: 8,
+                          decoration: const ShapeDecoration(
+                              color: Color(0xFF4D89EC),
+                              shape: OvalBorder(),
+                          ),
+                      ),
+                    ),
+              ]
+              ),
           ),
           label: '',
           ),
