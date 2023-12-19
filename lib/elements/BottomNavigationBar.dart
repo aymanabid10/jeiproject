@@ -37,7 +37,7 @@ class _HomeBottomNavigationBarState extends State<HomeBottomNavigationBar> {
           icon:Container(
               width: 70,
               height: 70,
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                   color: Color(0xFF4D89EC),
                   shape: OvalBorder(),
                   shadows: [
