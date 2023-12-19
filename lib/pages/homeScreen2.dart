@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:jeiproject/elements/HomeScreenMenu2.dart';
 import 'package:jeiproject/elements/addTickets.dart';
 import 'package:jeiproject/elements/QRCodeScanner.dart';
+import 'package:jeiproject/elements/BottomNavigationBar.dart';
+
 class HomeScreen2 extends StatefulWidget {
   const HomeScreen2({super.key});
 
@@ -24,6 +26,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
           ],
         )
         ),
+        bottomNavigationBar: HomeBottomNavigationBar(),
     );
   }
 }
