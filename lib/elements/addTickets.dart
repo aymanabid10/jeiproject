@@ -21,6 +21,7 @@ class _AddTicketToWalletState extends State<AddTicketToWallet> {
             ),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Text(
                 walletTickets.toString(),
@@ -39,20 +40,25 @@ class _AddTicketToWalletState extends State<AddTicketToWallet> {
               height: 40,
               width: 40,
             ),
-
-            const Text(
-              'in your wallet',
-              textAlign: TextAlign.right,
-              style: TextStyle(
-              color: Color(0xFFF4F4FB),
-                fontSize: 18,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.w700,
-                height: 0,
+            const Padding(
+              padding: EdgeInsets.only(top: 25),
+              child: Text(
+                'in your wallet',
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                color: Color(0xFFF4F4FB),
+                  fontSize: 18,
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.w700,
+                  height: 0,
+                ),
               ),
             ),
-          Image.asset(
-              "lib/images/addButton.png",
+            Padding(
+              padding: const EdgeInsets.only(bottom: 40),
+              child: Image.asset(
+                "lib/images/addButton.png",
+              ),
             ),
           
           ]
