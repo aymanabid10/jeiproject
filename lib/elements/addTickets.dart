@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class AddTicketToWallet extends StatefulWidget {
   const AddTicketToWallet({super.key});
   @override
@@ -12,29 +13,28 @@ class _AddTicketToWalletState extends State<AddTicketToWallet> {
     return Padding(
       padding: const EdgeInsets.only(top: 35),
       child: Container(
-          width: 320,
-          height: 100,
-          decoration: ShapeDecoration(
-            color: Color(0x994D89EC),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
+        width: 320,
+        height: 100,
+        decoration: ShapeDecoration(
+          color: Color(0x994D89EC),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Text(
-                walletTickets.toString(),
-                textAlign: TextAlign.right,
-                style: const TextStyle(
-                  color: Color(0xFFF4F4FB),
-                  fontSize: 70,
-                  fontFamily: 'Montserrat',
-                  fontWeight: FontWeight.w700,
-                  height: 0,
-                  ),
-                ),
-
+              walletTickets.toString(),
+              textAlign: TextAlign.right,
+              style: const TextStyle(
+                color: Color(0xFFF4F4FB),
+                fontSize: 70,
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.w700,
+                height: 0,
+              ),
+            ),
             Image.asset(
               "lib/images/receipt 2.png",
               height: 40,
@@ -46,7 +46,7 @@ class _AddTicketToWalletState extends State<AddTicketToWallet> {
                 'in your wallet',
                 textAlign: TextAlign.right,
                 style: TextStyle(
-                color: Color(0xFFF4F4FB),
+                  color: Color(0xFFF4F4FB),
                   fontSize: 18,
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w700,
@@ -60,9 +60,8 @@ class _AddTicketToWalletState extends State<AddTicketToWallet> {
                 "lib/images/addButton.png",
               ),
             ),
-          
-          ]
-          ),
+          ],
+        ),
       ),
     );
   }
