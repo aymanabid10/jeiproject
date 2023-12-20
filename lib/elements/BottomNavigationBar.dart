@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jeiproject/elements/BottomNavBarItemActive.dart';
 
 class HomeBottomNavigationBar extends StatefulWidget {
   const HomeBottomNavigationBar({super.key});
@@ -8,79 +9,69 @@ class HomeBottomNavigationBar extends StatefulWidget {
 }
 
 class _HomeBottomNavigationBarState extends State<HomeBottomNavigationBar> {
+  List<bool> state = [true, false, false, false, false];
+  int _selectedIndex = 0;
+  void _onItemTapped(int index){
+    setState(() {
+      int i;
+      for(i=0; i<state.length; i++){
+        state[i] = false;
+      }
+      _selectedIndex = index;
+      state[_selectedIndex] = true;
+
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return  BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
+      selectedFontSize: 0,
       elevation: 0,
       backgroundColor: const Color.fromRGBO(238, 238, 238, 1),
       items: [
         BottomNavigationBarItem(
-          icon: Image.asset(
-            "lib/images/01 align center.png",
-            height:40,
-            width: 40,
-          ),
+          icon: CurrentActiveButton(
+            isVisible: state[0],
+            ItemPath: "lib/images/01 align center.png",
+            ),
           label: '',
           ),
 
         BottomNavigationBarItem(
-          icon: Image.asset(
-            "lib/images/calendar 2.png",
-            height:40,
-            width: 40,
+          icon: CurrentActiveButton(
+            isVisible: state[1],
+            ItemPath: "lib/images/calendar 2.png",
           ),
           label: '',
           ),
 
           BottomNavigationBarItem(
-          icon:Container(
-              width: 70,
-              height: 70,
-              decoration: const ShapeDecoration(
-                  color: Color(0xFF4D89EC),
-                  shape: OvalBorder(),
-                  shadows: [
-                      BoxShadow(
-                          color: Color(0x3F000000),
-                          blurRadius: 5,
-                          offset: Offset(0, 8),
-                          spreadRadius: 0,
-                      )
-                  ],
-              ),
-              child: Padding(
-                  padding: EdgeInsets.all(15),
-                  child: Image.asset(
-                  "lib/images/QR_code_icon.png",
-                  color: Color(0xFFEEEEEE),
-                  width: 40,
-                  height: 40,
-                ),
-              ),
+          icon: CurrentActiveMainButton(
+            isVisible: state[2],
           ),
           label: '',
           ),
 
           BottomNavigationBarItem(
-          icon: Image.asset(
-            "lib/images/exchange.png",
-            height:40,
-            width: 40,
-            color: Color(0xFF4D89EC),
+          icon : CurrentActiveButton(
+            isVisible: state[3],
+            ItemPath: "lib/images/exchange.png",
           ),
           label: '',
           ),
 
           BottomNavigationBarItem(
-          icon: Image.asset(
-            "lib/images/shopping-bag-add 2.png",
-            height:40,
-            width: 40,
+          icon : CurrentActiveButton(
+            isVisible: state[4],
+            ItemPath: "lib/images/shopping-bag-add 2.png",
           ),
+          
           label: '',
           ),
       ],
+      currentIndex: _selectedIndex,
+      onTap: _onItemTapped,
       );
   }
 }
