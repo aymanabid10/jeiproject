@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/homeScreen2.dart';
-import 'package:jeiproject/pages/authenticationCode.dart';
+import 'package:jeiproject/pages/authenticationCodeScreen.dart';
 void main() {
   runApp(const MyApp());
 }

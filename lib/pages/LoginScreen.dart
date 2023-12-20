@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jeiproject/elements/Connection.dart';
-import 'package:jeiproject/elements/LogInButton.dart';
+import 'package:jeiproject/elements/CustomButton.dart';
 import 'package:jeiproject/elements/LoginField.dart';
 import 'package:jeiproject/elements/Fist_password.dart';
 
@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
             labelText: 'Password',
             imageAsset: "lib/images/lock 4.png",
           ),
-          LoginButton(),
+          CustomButton(label: "Login",),
           Forgot(),
         ],
       ),

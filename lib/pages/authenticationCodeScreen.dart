@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jeiproject/elements/Menu.dart';
 import 'package:jeiproject/elements/Title.dart';
 import 'package:jeiproject/elements/codeFields.dart';
+import 'package:jeiproject/elements/CustomButton.dart';
 
 class AccountVerification extends StatefulWidget {
   const AccountVerification({super.key});
@@ -22,6 +23,10 @@ class _AccountVerificationState extends State<AccountVerification> {
         children: [
           PageTitle(Title: "Enter the code sent in the email",),
           CodeField(controller: controller,),
+          Padding(
+            padding: EdgeInsets.only(top: 70),
+            child : CustomButton(label: "Send me the code")
+          ),
         ],
       ),
 
