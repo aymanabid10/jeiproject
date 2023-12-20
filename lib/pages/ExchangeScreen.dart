@@ -14,7 +14,7 @@ class ExchangeScreen extends StatefulWidget {
 class _ExchangeScreen extends State<ExchangeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Color.fromRGBO(238, 238, 238, 1),
       appBar: AppBarScreens(),
       body: Column(
