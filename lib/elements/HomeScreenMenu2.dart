@@ -15,7 +15,7 @@ class MyHomeScreenMenu2 extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(  
       
       title: Padding(
-        padding: EdgeInsets.only(top: 30),
+        padding: EdgeInsets.only(top: 30, bottom: 5),
         child: Text(
           menuTitle,
           style: const TextStyle(
@@ -33,7 +33,7 @@ class MyHomeScreenMenu2 extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Color.fromRGBO(238, 238, 238, 1),
       elevation: 0,
       leading: Padding(
-        padding:  const EdgeInsets.only(left: 28.0, top: 30),
+        padding:  const EdgeInsets.only(left: 28.0, top: 30, bottom: 5),
         child: Image.asset(
           'lib/images/LeadingIcon.png',
           height: 44,
@@ -42,7 +42,7 @@ class MyHomeScreenMenu2 extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         const Padding(
-          padding: EdgeInsets.only(top: 18),
+          padding: EdgeInsets.only(top: 18, bottom: 5),
           child: Text(
             '7',
             textAlign: TextAlign.right,
@@ -56,7 +56,7 @@ class MyHomeScreenMenu2 extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 34.0, right: 24.0),
+          padding: const EdgeInsets.only(top: 34.0, right: 24.0, bottom: 5),
           child: Image.asset(
               "lib/images/receipt 3.png",
               height: 20,
