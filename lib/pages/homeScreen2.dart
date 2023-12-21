@@ -17,7 +17,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(238, 238, 238, 1),
-      appBar: MyHomeScreenMenu2(),
+      appBar: MyHomeScreenMenu2(menuTitle: '',),
       body: Center(
         child: Column(
           children: [
