@@ -14,10 +14,16 @@ class _TransactionsHistoryPagesState extends State<TransactionsHistoryPages> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(238, 238, 238, 1),
       appBar: MyHomeScreenMenu2(menuTitle: "History"),
-      body: Column(
+      body: ListView(
         children: [
           HistoryTransactionTicket(),
           HistoryTransactionTicket(),
+          HistoryTransactionTicket(),
+          HistoryTransactionTicket(),
+          HistoryTransactionTicket(),
+          const SizedBox(
+            height: 25,
+          ),
         ],
       ),
       
